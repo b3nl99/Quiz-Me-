@@ -2,27 +2,145 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 .score-button {
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px 0px;
-    border: none;
+    font-size: 26px;
+    color: plum;
+    display: inline-block;
+    padding: 20px;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+
+.start_page,
+.quiz-section,
+.finished {
+    position: absolute;
+    margin: 0 auto;
+    width: 55%;
+    max-width: 800px;
+    top: 25%;
+    left: 25%;
+    height: 55%;
+}
+
+.start_page_title {
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.info {
+    padding: 40px;
     font-size: 20px;
-    background-color: plum;
+
+}
+
+.start-button {
+    background-color: blue;
     color: white;
+    font-size: 25px;
+    border: 10px solid blue;
+    border-radius: 10px;
     display: inline-block;
 
 }
 
-
-.quiz-start-page {
-    margin: 0 auto;
-    width: 100%;
-    max-width: 800px;
+.quiz-section {
+    text-align: center;
+    background: white;
+    width: 55%;
+    height: 55%;
+    /* display: none; */
 }
 
-.quiz-start-page p {
+.que_text {
+    font-size: 46px;
+    background: white;
+    border: 30px solid white;
+    padding: 10px 30px;
+    text-align: justify;
+
+}
+
+.option_list {
+    font-size: 26px;
+    padding: 20px;
+    display: block;
+}
+
+.option {
+    background-color: blue;
+    border-radius: 5px;
+    padding: 15px;
+    text-align: justify;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.finished {
+    text-align: justify;
+    background: white;
+    width: 55%;
+    height: 80%;
+    display: block;
+}
+
+.finished h2 {
+    font-size: 46px;
+}
+
+.final-score {
+    font-size: 26px;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.initials_text {
+    font-size: 26px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.finished textarea {
+    font-size: 26px;
     
 }
 
-button {
-    
+.submit-btn {
+    background-color: blue;
+    color: white;
+    font-size: 26px;
+    display: block;
+    border-radius: 10px;
+    padding: 10px 15px;
+    /* pointer-events: none;
+    transform: translate(25%,50%); */
+
+}
+
+.highscorehtml {
+    display: block;
+    margin-bottom: 15px;
+}
+
+.highscorehtml textarea {
+    margin-bottom: 15px;
+    background-color: lightblue;
+}
+
+.highscorehtml button {
+    background-color: blue;
+    color: white;
+    font-size: 16px;
+    padding: 5px 10px;
+    border-radius: 5px;
+
 }
