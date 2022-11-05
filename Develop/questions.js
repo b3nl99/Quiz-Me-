@@ -1,8 +1,9 @@
-let question = [
+let questions = [
     
     {
-        question1: "What is 1 + 1 ?",
-        answer: "2",
+        number: 1,
+        question: "What is 1 + 1 ?",
+        answer: "B: 2",
         options: [
             "A: 1",
             "B: 2",
@@ -11,8 +12,9 @@ let question = [
         ]
     },
     {
-        question2: "What is 2 + 2 ?",
-        answer: "4",
+        number: 2,
+        question: "What is 2 + 2 ?",
+        answer: "D: 4",
         options: [
             "A: 1",
             "B: 2",
@@ -21,8 +23,9 @@ let question = [
         ]
     },
     {
-        question3: "What is 3 + 3 ?",
-        answer: "2",
+        number: 3,
+        question: "What is 3 + 3 ?",
+        answer: "C: 6",
         options: [
             "A: 2",
             "B: 4",
@@ -31,8 +34,9 @@ let question = [
         ]
     },
     {
-        question4: "What is 4 + 4 ?",
-        answer: "2",
+        number: 4,
+        question: "What is 4 + 4 ?",
+        answer: "D: 8",
         options: [
             "A: 2",
             "B: 4",
@@ -41,8 +45,9 @@ let question = [
         ]
     },
     {
-        question5: "What is 5 + 5 ?",
-        answer: "2",
+        number: 5,
+        question: "What is 5 + 5 ?",
+        answer: "A: 10",
         options: [
             "A: 10",
             "B: 20",
