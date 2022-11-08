@@ -164,3 +164,8 @@ a {
     border-radius: 5px;
 
 }
+
+.go_back {
+    text-decoration: none;
+    color: white;
+}
