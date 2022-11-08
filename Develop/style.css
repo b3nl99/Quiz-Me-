@@ -58,6 +58,12 @@ a {
     pointer-events: auto;
 }
 
+.finished.gameOver{
+    z-index: 5;
+    opacity: 1;
+    /* pointer-events: auto; */
+}
+
 .quiz_section {
     text-align: center;
     background: white;

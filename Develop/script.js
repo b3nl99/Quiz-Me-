@@ -1,19 +1,18 @@
 const start_button = document.querySelector(".start_button");
 const quiz_section = document.querySelector(".quiz_section");
 const submit_btn = document.querySelector(".submit_btn button");
-// const start_btn = document.querySelector(".start_btn button");
-// const start_btn = document.querySelector(".start_btn button");
+const timeCount = document.querySelector(".timer .timer_sec");
+const last = document.querySelector(".finished");
 // const start_btn = document.querySelector(".start_btn button");
 
 start_btn.onclick = ()=> {
     quiz_section.classList.add("activeInfo");
     showQuestions(0);
-    
+    startTimer(3);
 }
 
-
-
 let que_count = 0;
+let counter;
 
 
 function showQuestions(index){
@@ -27,7 +26,7 @@ function showQuestions(index){
     
     que_text.innerHTML = que_tag;
     option_list.innerHTML = option_tag;
-    const option = option_list.querySelector(".option");
+    const option = option_list.querySelectorAll(".option");
 
     for (let i = 0; i < option.length; i++) {
         option[i].setAttribute("onclick", "optionsSelected(this)");
@@ -45,3 +44,20 @@ function optionsSelected(answer){
     
 }
 
+function startTimer(time){
+    counter = setInterval(timer, 1000);
+    function timer(){
+        timeCount.textContent = time;
+        time--;
+        if (time < 0){
+            clearInterval(counter);
+            lastPage();
+            
+        }
+    }
+    
+}
+
+function lastPage(){
+    last.classList.add("gameOver");
+}
