@@ -58,6 +58,10 @@ a {
     pointer-events: auto;
 }
 
+.quiz_section.finishedQuiz {
+    pointer-events: none;
+}
+
 .finished.gameOver{
     z-index: 5;
     opacity: 1;

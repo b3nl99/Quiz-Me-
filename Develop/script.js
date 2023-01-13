@@ -5,10 +5,11 @@ const timeCount = document.querySelector(".timer .timer_sec");
 const last = document.querySelector(".finished");
 // const start_btn = document.querySelector(".start_btn button");
 
+
 start_btn.onclick = ()=> {
     quiz_section.classList.add("activeInfo");
     showQuestions(0);
-    startTimer(3);
+    startTimer(60);
 }
 
 let que_count = 0;
@@ -19,10 +20,10 @@ function showQuestions(index){
     const que_text = document.querySelector(".que_text");
     const option_list = document.querySelector(".option_list");
     let que_tag = "<span>"+ questions[index].question +"</span>";
-    let option_tag = '<section class="option">' + questions[index].options[0] + '<span></span></section>'
-                        +'<section class="option">' + questions[index].options[1] + '<span></span></section>'
-                        +'<section class="option">' + questions[index].options[2] + '<span></span></section>'
-                        +'<section class="option">' + questions[index].options[3] + '<span></span></section>'
+    let option_tag = '<section class="option"">' + questions[index].options[0] + '<span></span></section>'
+                        +'<section class="option"">' + questions[index].options[1] + '<span></span></section>'
+                        +'<section class="option"">' + questions[index].options[2] + '<span></span></section>'
+                        +'<section class="option"">' + questions[index].options[3] + '<span></span></section>'
     
     que_text.innerHTML = que_tag;
     option_list.innerHTML = option_tag;
@@ -37,12 +38,16 @@ function optionsSelected(answer){
     let userAns = answer.textContent;
     let correctAns = questions[que_count].answer;
     if(userAns == correctAns) {
-        console.log("Answer is Correct");
+        que_count++;
+        showQuestions(que_count);
+        console.log("Answer is Correct")
     } else {
+        que_count++;
+        showQuestions(que_count);
         console.log("Answer is Wrong")
     }
-    
 }
+
 
 function startTimer(time){
     counter = setInterval(timer, 1000);
@@ -50,10 +55,10 @@ function startTimer(time){
         timeCount.textContent = time;
         time--;
         if (time < 0){
+            quiz_section.classList.add("finishedQuiz");
             clearInterval(counter);
             lastPage();
-            
-        }
+        } 
     }
     
 }
